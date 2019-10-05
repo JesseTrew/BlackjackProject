@@ -38,7 +38,8 @@ public class Card {
 	}
 
 	public int getValue() {
-		return getValue();
+		
+		return rank.getValue();
 	}
 	
 	@Override

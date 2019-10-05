@@ -21,7 +21,11 @@ public class BlackjackHand extends Hand{
 	// M e t h o d s
 	
 	public int getHandValue() {
-		return 0;
+		int handValue = 0;
+		for (Card card : this.cards) {
+			handValue += card.getValue();
+		}
+		return handValue;
 	}
 	
 	public boolean isBlackjack() {
@@ -31,12 +35,12 @@ public class BlackjackHand extends Hand{
 	public boolean isBust() {
 		return false;
 	}
-
+	
 	@Override
 	public void addCard(Card card) {
-		// TODO Auto-generated method stub
-		super.addCard(card);
+		this.cards.add(card);
 	}
+
 
 	@Override
 	public void clear() {

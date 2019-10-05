@@ -15,6 +15,7 @@ public abstract class Hand {
 
 	public Hand() {
 		super();
+		cards = createHand();
 	}
 	
 	public Hand(List<Card> cards) {
@@ -24,8 +25,13 @@ public abstract class Hand {
 	
 	// M e t h o d s
 
+	private List<Card> createHand(){
+		List<Card> cards = new ArrayList<>();
+		return cards;
+	}
+	
 	public void addCard(Card card) {
-		cards.add(card);
+		this.cards.add(card);
 	}
 	
 	public void clear() {
